@@ -10,4 +10,6 @@ export const getFilesConfig = createEslintConfig({
         "unicorn/filename-case": ["error", { case: "kebabCase" } ],
     },
 
+    /** Ignored files */
+    ignorePatterns: ["temp/**"],
 });
