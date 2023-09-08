@@ -59,6 +59,9 @@ export const getImportsConfig = createEslintConfig({
 
         /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/named.md */
         "import/named": "off",
+
+        /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md */
+        "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
     },
 
     overrides: [
