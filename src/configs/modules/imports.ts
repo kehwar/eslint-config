@@ -2,14 +2,6 @@ import { createEslintConfig } from "../../utils";
 
 export const getImportsConfig = createEslintConfig({
     rules: {
-        /** Enforce absolute paths in named exports */
-        "no-restricted-syntax": [
-            "error",
-            {
-                selector: "ExportNamedDeclaration[source.value=/\\.+\\u002F/]",
-                message: "Do not use relative paths inside named exports",
-            },
-        ],
 
         /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md */
         "import/order": [
@@ -24,7 +16,7 @@ export const getImportsConfig = createEslintConfig({
         ],
 
         /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md */
-        "import/newline-after-import": ["error", { considerComments: true } ],
+        "import/newline-after-import": ["error", { considerComments: false } ],
 
         /** @see https://eslint.org/docs/latest/rules/no-restricted-imports */
         "no-restricted-imports": [
