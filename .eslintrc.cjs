@@ -5,4 +5,8 @@ module.exports = {
 
     /** Extensions */
     extends: ["@kehwar"],
+
+    rules: {
+
+    },
 };
