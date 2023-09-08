@@ -16,30 +16,30 @@
         "lint": "pnpm run build && pnpm install && eslint ."
     },
     "dependencies": {
-        "@antfu/eslint-config": "^0.39.7",
-        "@nuxtjs/eslint-config-typescript": "^12.0.0",
-        "@typescript-eslint/utils": "5.62.0",
+        "@antfu/eslint-config": "^0.41.0",
+        "@nuxtjs/eslint-config-typescript": "^12.1.0",
+        "@typescript-eslint/utils": "6.6.0",
         "eslint-plugin-consistent-default-export-name": "^0.0.15",
         "eslint-plugin-editorconfig": "^4.0.3",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-jsdoc": "^46.4.3",
+        "eslint-plugin-import": "^2.28.1",
+        "eslint-plugin-jsdoc": "^46.5.1",
         "eslint-plugin-lodash": "^7.4.0",
-        "eslint-plugin-n": "^16.0.1",
+        "eslint-plugin-n": "^16.0.2",
         "eslint-plugin-promise": "^6.1.1",
-        "eslint-plugin-sonarjs": "^0.19.0",
+        "eslint-plugin-sonarjs": "^0.21.0",
         "eslint-plugin-tailwindcss": "^3.13.0",
-        "eslint-plugin-unicorn": "^47.0.0",
-        "eslint-plugin-vue": "^9.15.1",
+        "eslint-plugin-unicorn": "^48.0.1",
+        "eslint-plugin-vue": "^9.17.0",
         "lodash": "^4.17.21"
     },
     "devDependencies": {
         "@kehwar/eslint-config": "link:.",
-        "@types/lodash": "^4.14.195",
-        "@types/node": "^20.4.1",
-        "release-it": "^16.1.0",
-        "typescript": "^5.1.6",
-        "unbuild": "^1.2.1",
-        "vitest": "^0.33.0"
+        "@types/lodash": "^4.14.198",
+        "@types/node": "^20.5.9",
+        "release-it": "^16.1.5",
+        "typescript": "^5.2.2",
+        "unbuild": "^2.0.0",
+        "vitest": "^0.34.4"
     },
     "peerDependencies": {
         "eslint": "^8.38.0"
