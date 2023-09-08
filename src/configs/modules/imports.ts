@@ -47,6 +47,15 @@ export const getImportsConfig = createEslintConfig({
 
         /** @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-module.md */
         "unicorn/prefer-module": "error",
+
+        /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-deprecated.md */
+        "import/default": "off",
+
+        /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-named-as-default.md */
+        "import/no-named-as-default": "off",
+
+        /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-named-as-default-member.md */
+        "import/no-named-as-default-member": "off",
     },
 
     overrides: [
@@ -62,9 +71,4 @@ export const getImportsConfig = createEslintConfig({
             },
         },
     ],
-
-    settings: {
-        /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/named.md#settings */
-        "import/ignore": ["lodash"],
-    },
 });
