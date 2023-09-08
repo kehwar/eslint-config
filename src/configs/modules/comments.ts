@@ -28,7 +28,7 @@ export const getCommentsConfig = createEslintConfig({
                 allowInterfaceStart: true,
                 allowModuleStart: true,
                 allowTypeStart: true,
-                ignorePattern: "@ts.*",
+                ignorePattern: "^\\s*@.*$",
             },
         ],
         "lines-around-comment": "off",
