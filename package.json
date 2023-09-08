@@ -1,6 +1,6 @@
 {
     "name": "@kehwar/eslint-config",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "license": "MIT",
     "homepage": "https://github.com/kehwar/eslint-config",
     "main": "./dist/index.cjs",
