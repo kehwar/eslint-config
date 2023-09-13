@@ -81,6 +81,10 @@ export const getImportsConfig = createEslintConfig({
         {
             files: ["index.ts"],
             rules: {
+
+                /** @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md */
+                "import/order": "off",
+
                 /** @see https://github.com/minseoksuh/eslint-plugin-consistent-default-export-name/blob/main/docs/rules/default-import-match-filename.md */
                 "consistent-default-export-name/default-import-match-filename": "off",
             },
