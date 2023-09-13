@@ -76,5 +76,14 @@ export const getImportsConfig = createEslintConfig({
                 "@typescript-eslint/no-var-requires": "off",
             },
         },
+
+        /** Override for index.ts files */
+        {
+            files: ["index.ts"],
+            rules: {
+                /** @see https://github.com/minseoksuh/eslint-plugin-consistent-default-export-name/blob/main/docs/rules/default-import-match-filename.md */
+                "consistent-default-export-name/default-import-match-filename": "off",
+            },
+        },
     ],
 });
