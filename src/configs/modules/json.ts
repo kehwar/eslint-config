@@ -1,7 +1,7 @@
 import { createEslintConfig } from "../../utils";
 
-export const getLodashConfig = createEslintConfig({
+export const getJsoncConfig = createEslintConfig({
     rules: {
-        "jsonc/indent": ["error", 2],
+        "jsonc/indent": ["error", 4],
     },
 });

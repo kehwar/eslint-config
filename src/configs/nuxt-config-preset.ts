@@ -10,6 +10,7 @@ import { getExtensionsConfig } from "./modules/extensions";
 import { getFilesConfig } from "./modules/files";
 import { getFunctionsConfig } from "./modules/functions";
 import { getImportsConfig } from "./modules/imports";
+import { getJsoncConfig } from "./modules/json";
 import { getLodashConfig } from "./modules/lodash";
 import { getPluginsConfig } from "./modules/plugins";
 import { getPromisesConfig } from "./modules/promises";
@@ -45,6 +46,7 @@ export function getNuxtConfigPreset() {
         getTailwindConfig(),
         getTestsConfig(),
         getVueConfig(),
+        getJsoncConfig(),
         (objValue, srcValue) => isArray(objValue) ? objValue.concat(srcValue) : undefined
     ) as Linter.Config;
 }
