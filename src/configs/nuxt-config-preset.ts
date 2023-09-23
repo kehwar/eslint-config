@@ -1,4 +1,4 @@
-import { mergeWith, isArray } from "lodash";
+import { isArray, mergeWith } from "lodash";
 import { getArraysConfig } from "./modules/arrays";
 import { getBlocksConfig } from "./modules/blocks";
 import { getCommentsConfig } from "./modules/comments";
@@ -22,7 +22,7 @@ import { getTestsConfig } from "./modules/tests";
 import { getVueConfig } from "./modules/vue";
 import type { Linter } from "@typescript-eslint/utils/dist/ts-eslint";
 
-export function getNuxtConfigPreset () {
+export function getNuxtConfigPreset() {
     return mergeWith(
         getPluginsConfig(),
         getExtensionsConfig(),

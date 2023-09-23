@@ -7,5 +7,6 @@ export const getExtensionsConfig = createEslintConfig({
         "plugin:lodash/recommended", // https://github.com/wix-incubator/eslint-plugin-lodash
         "plugin:promise/recommended", // https://github.com/eslint-community/eslint-plugin-promise
         "plugin:tailwindcss/recommended", // https://github.com/francoismassart/eslint-plugin-tailwindcss
+        "@antfu",
     ],
 });
