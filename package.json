@@ -30,6 +30,7 @@
         "build": "unbuild",
         "dev": "unbuild --stub",
         "lint": "eslint .",
+        "lint-staged": "eslint --fix",
         "typecheck": "tsc --noEmit",
         "release": "pnpm run build && release-it --ci"
     },
