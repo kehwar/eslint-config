@@ -1,8 +1,11 @@
-# Git ignore file for Nuxt.js projects
-# @see https://git-scm.com/docs/gitignore
-
-node_modules
-*.log*
-.vscode
+.cache
+.DS_Store
+.idea
+*.log
+*.tgz
+coverage
 dist
-.eslintrc.dump.json
+lib-cov
+logs
+node_modules
+temp
