@@ -31,7 +31,7 @@
         "lint": "eslint .",
         "lint-staged": "eslint --fix",
         "typecheck": "tsc --noEmit",
-        "release": "pnpm run build && release-it --ci"
+        "release": "pnpm run build && pnpm run bumpp && pnpm publish"
     },
     "peerDependencies": {
         "eslint": "^8.53.0"
@@ -47,8 +47,8 @@
     "devDependencies": {
         "@types/eslint": "^8.44.7",
         "@types/node": "^20.9.1",
+        "bumpp": "^9.2.0",
         "eslint": "^8.53.0",
-        "release-it": "^17.0.0",
         "typescript": "^5.2.2",
         "unbuild": "^2.0.0"
     }
