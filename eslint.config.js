@@ -1,3 +1,3 @@
-import kehwar from "./src/index.js";
+import kehwar from "./src/index";
 
-export default kehwar;
+export default kehwar();
