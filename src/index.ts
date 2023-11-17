@@ -91,8 +91,6 @@ export default function (...config: ConfigItem[]) {
                 ],
 
                 // Sonar
-                "sonarjs/cognitive-complexity": "off", // TODO: remove
-                "sonarjs/no-duplicate-string": "off", // TODO: remove
                 "sonarjs/prefer-immediate-return": "off",
                 "sonarjs/prefer-single-boolean-return": "off",
 
@@ -244,7 +242,6 @@ export default function (...config: ConfigItem[]) {
                 "vue/component-tags-order": ["error", { order: ["script", "template", "style"] } ],
                 "vue/define-emits-declaration": ["error", "type-based"],
                 "vue/define-props-declaration": ["error", "type-based"],
-                "vue/no-dupe-keys": "off", // TODO: remove
             },
         },
 
@@ -280,28 +277,12 @@ export default function (...config: ConfigItem[]) {
             },
         },
 
-        // ["index.ts"]
-        {
-            files: ["**/index.ts"],
-            rules: {
-                "import/order": "off",
-            },
-        },
-
         // ["*.test.ts"]
         {
             files: ["**/*.test.ts"],
             rules: {
                 "no-console": "off",
                 "test/consistent-test-it": ["error", { fn: "test" } ],
-            },
-        },
-
-        // ["*.js"]
-        {
-            files: ["**/*.js"],
-            rules: {
-                "unicorn/prefer-module": "off",
             },
         },
 
