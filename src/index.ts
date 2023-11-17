@@ -1,6 +1,8 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import antfu from "@antfu/eslint-config";
+
+// @ts-expect-error No types
 import { FlatCompat } from "@eslint/eslintrc";
 
 /**
@@ -12,12 +14,12 @@ const extend = (() => {
     const compat = new FlatCompat({
         baseDirectory: __dirname,
     });
-    return (configPath) => {
+    return (configPath: string) => {
         const configArray = compat.extends(configPath);
         return configArray
 
         // Only keep the rules
-            .filter((config) => config.rules != null);
+            .filter((config: any) => config.rules != null);
     };
 })();
 
@@ -45,6 +47,7 @@ export default antfu(
             "camelcase": [
                 "error",
                 {
+                    // @ts-expect-error Array is allowd
                     allow: ["^UNSAFE_", "^U_", "^_", "^__"],
                     ignoreDestructuring: false,
                     ignoreGlobals: true,
