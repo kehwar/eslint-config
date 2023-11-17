@@ -1,6 +1,6 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import type { ConfigItem } from "@antfu/eslint-config";
+import type { ConfigItem, StylisticConfig } from "@antfu/eslint-config";
 import antfu from "@antfu/eslint-config";
 
 // @ts-expect-error No types
@@ -24,13 +24,12 @@ const extend = (() => {
     };
 })();
 
+const stylisticConfig : StylisticConfig = { indent: 4, quotes: 'single'}
+
 export default function (...config: ConfigItem[]) {
     return antfu(
         {
-            stylistic: {
-                indent: 4,
-                quotes: "double",
-            },
+            stylistic: stylisticConfig,
             typescript: true,
             vue: true,
         },
@@ -170,8 +169,7 @@ export default function (...config: ConfigItem[]) {
                         ignorePattern: "^\\s*@.*$",
                     },
                 ],
-                "style/quotes": ["error", "double", { allowTemplateLiterals: true, avoidEscape: true } ],
-                "style/semi": ["error", "always"],
+                "style/quotes": ["error", stylisticConfig.quotes, { allowTemplateLiterals: true, avoidEscape: true } ],
 
                 // Tailwind
                 "tailwindcss/no-custom-classname": [
