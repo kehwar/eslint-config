@@ -4,7 +4,7 @@ import antfu from '@antfu/eslint-config'
 
 // @ts-expect-error No types
 import { FlatCompat } from '@eslint/eslintrc'
-import type { ConfigItem, StylisticConfig } from '@antfu/eslint-config'
+import type { FlatConfigItem, StylisticConfig } from '@antfu/eslint-config'
 
 /**
  * @see https://eslint.org/docs/latest/use/configure/migration-guide#using-eslintrc-configs-in-flat-config
@@ -24,9 +24,10 @@ const extend = (() => {
     }
 })()
 
+// @ts-expect-error Should be partial
 const stylisticConfig: StylisticConfig = { indent: 4, quotes: 'single' }
 
-export default function (...config: ConfigItem[]) {
+export default function (...config: FlatConfigItem[]) {
     return antfu(
         {
             stylistic: stylisticConfig,
@@ -48,7 +49,6 @@ export default function (...config: ConfigItem[]) {
                 'camelcase': [
                     'error',
                     {
-                        // @ts-expect-error Array is allowd
                         allow: ['^UNSAFE_', '^U_', '^_', '^__'],
                         ignoreDestructuring: false,
                         ignoreGlobals: true,
