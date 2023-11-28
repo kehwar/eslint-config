@@ -24,7 +24,6 @@ const extend = (() => {
     }
 })()
 
-// @ts-expect-error Should be partial
 const stylisticConfig: StylisticConfig = { indent: 4, quotes: 'single' }
 
 export default function (...config: FlatConfigItem[]) {
